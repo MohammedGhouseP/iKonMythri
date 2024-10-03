@@ -1,4 +1,5 @@
 export default function Footer() {
+  
   return (
     <>
       <footer className="bg-[#54595f] text-white py-5 pb-0">
@@ -27,7 +28,7 @@ export default function Footer() {
 
           <div className="flex flex-wrap justify-around m-6">
             <div className="mx-4 p-3">
-              <h3 className="text-lg font-semibold ">Company</h3>
+              <h3 className="text-2xl font-semibold ">Company</h3>
               <ul className="p-3  ">
                 <li className="hover:underline cursor-pointer p-1">About Us</li>
                 <li className="hover:underline cursor-pointer p-1">Contact Us</li>
@@ -45,7 +46,7 @@ export default function Footer() {
               </ul>
             </div>
             <div className="mx-4">
-              <h3 className="text-lg font-semibold p-3">Services</h3>
+              <h3 className="text-2xl font-semibold p-3">Services</h3>
               <ul className="p-3">
                 <li className="hover:underline cursor-pointer p-1">
                   IkonMytri Learning Solutions
@@ -58,7 +59,7 @@ export default function Footer() {
             </div>
 
             <div className="text-center mb-6 ">
-              <h3 className="text-lg font-semibold p-3  ">Contact Us</h3>
+              <h3 className="text-2xl font-semibold p-3  ">Contact Us</h3>
               <p>Call: +91 789-273-0639</p>
               <p>Call: +91 960-650-0309</p>
               <p>

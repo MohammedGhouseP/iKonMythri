@@ -1,8 +1,8 @@
-export default function About() {
+export default function Blog() {
     return (
         <div>
             <p className="text-3xl font-bold underline bg-red-300">
-                About Us
+                blog
             </p>
         </div>
     );
