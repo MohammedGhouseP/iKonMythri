@@ -4,8 +4,10 @@ import image1 from "../../assets/3DLearning.png";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { useNavigate } from "react-router-dom";
 
 export default function CardSlider() {
+  const navigate = useNavigate()
   const settings = {
     dots: false, // Disable dots
     infinite: true,
@@ -72,11 +74,11 @@ export default function CardSlider() {
   ];
 
   return (
-    <div className="px-20 py-10 gap-10 m-7">
-      <Slider {...settings}>
+    <div className="px-20 py-10 gap-10 m-7 text-md bg-gray-300 rounded-xl " >
+      <Slider {...settings} >
         {Cards.map((card) => (
-          <div key={card.id} className="m-3">
-            <Card
+          <div key={card.id} className="m-3 " onClick={() => navigate("/service")}>
+            <Card className="p-10 "
               img={card.img}
               title={card.title}
               description={card.description.para}
@@ -88,3 +90,5 @@ export default function CardSlider() {
     </div>
   );
 }
+
+

@@ -1,4 +1,13 @@
+import { useNavigate } from "react-router-dom";
+import About from "./About.jsx"
+import Contact from "./Contact.jsx"
+import Blog from "./Blog.jsx"
+import logo from "../assets/logo.png"
+
+
+
 export default function Footer() {
+  const navigation  = useNavigate()
   
   return (
     <>
@@ -9,7 +18,9 @@ export default function Footer() {
               Skill Development Portal Launching Soon..
             </h2>
             <hr className="w-1/2 mx-auto border-t-2 border-gray-300 p-2"  />
-            <p className="text-lg p-3">Ikon Mytri Services Private Limited</p>
+            <p className=" p-3 flex justify-center">
+              <img  src={logo} alt="" />
+            </p>
             <p className="text-lg px-14 py-3">
               IkonMytri Services is a Bengaluru-based firm specializing in
               several functional areas such as Education Technology, Software
@@ -18,11 +29,12 @@ export default function Footer() {
           </div>
 
           <div className="flex justify-center mb-6 text-lg">
-            <a href="#" className="mx-2 text-gray-400 hover:text-white">
-              Facebook-f
+            <a href="https://www.facebook.com/IkonMytri" target="_blank" className="mx-2 text-gray-400 hover:text-white">
+              Facebook  
             </a>
-            <a href="#" className="mx-2 text-gray-400 hover:text-white">
-              Linkedin-in
+            <p>|</p>
+            <a href="https://www.linkedin.com/company/ikonmytri-services/" target="_blank" className="mx-2 text-gray-400 hover:text-white">
+              Linkedin
             </a>
           </div>
 
@@ -30,10 +42,10 @@ export default function Footer() {
             <div className="mx-4 p-3">
               <h3 className="text-2xl font-semibold ">Company</h3>
               <ul className="p-3  ">
-                <li className="hover:underline cursor-pointer p-1">About Us</li>
-                <li className="hover:underline cursor-pointer p-1">Contact Us</li>
-                <li className="hover:underline cursor-pointer p-1">Blog</li>
-                <li className="hover:underline cursor-pointer p-1">Sitemap</li>
+                <li className="hover:underline cursor-pointer p-1" onClick={()=>{navigation('/About')}}>About Us</li>
+                <li className="hover:underline cursor-pointer p-1" onClick={()=>{navigation('/Contact')}}>Contact Us</li>
+                <li className="hover:underline cursor-pointer p-1" onClick={()=>{navigation('/blog')}}>Blog</li>
+                <li className="hover:underline cursor-pointer p-1" >Sitemap</li>
                 <li className="hover:underline cursor-pointer p-1">
                   Privacy Policy
                 </li>
